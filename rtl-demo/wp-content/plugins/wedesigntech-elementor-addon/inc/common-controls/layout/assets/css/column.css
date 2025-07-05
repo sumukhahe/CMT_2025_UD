@@ -1,0 +1,81 @@
+
+/* Columns */
+.wdt-column-holder .wdt-column-wrapper { width: auto; }
+.wdt-column-wrapper { display: flex; flex-wrap: wrap; }
+.wdt-column-wrapper .wdt-column { margin: 0; }
+
+.wdt-column-wrapper.wdt-column-gap-default { margin: 0 -10px; }
+.wdt-column-wrapper.wdt-column-gap-narrow { margin: 0 -5px; }
+.wdt-column-wrapper.wdt-column-gap-extended { margin: 0 -15px; }
+.wdt-column-wrapper.wdt-column-gap-wide { margin: 0 -20px; }
+.wdt-column-wrapper.wdt-column-gap-wider { margin: 0 -30px; }
+
+.wdt-column-wrapper.wdt-column-gap-default .wdt-column { padding: 10px; }
+.wdt-column-wrapper.wdt-column-gap-no .wdt-column { padding: 0; }
+.wdt-column-wrapper.wdt-column-gap-narrow .wdt-column { padding: 5px; }
+.wdt-column-wrapper.wdt-column-gap-extended .wdt-column { padding: 15px; }
+.wdt-column-wrapper.wdt-column-gap-wide .wdt-column { padding: 20px; }
+.wdt-column-wrapper.wdt-column-gap-wider .wdt-column { padding: 30px; }
+
+
+/*==== Scroll Snap Style ====*/
+
+.wdt-column-wrapper.wdt-snap-scroll-enabled:not(.wdt-snap-scroll) { flex-wrap: wrap; }
+
+.wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll { overflow: auto; display: flex; flex-wrap: nowrap; 
+  scroll-snap-type: X mandatory; scroll-padding-left: 0px; -webkit-overflow-scrolling: touch; }
+.wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll div.wdt-column { scroll-snap-align: start; width: auto !important; }
+
+/*==== Scroll Snap - Pagination Style ====*/
+.wdt-column-wrapper.wdt-snap-scroll-enabled:not(.wdt-snap-scroll) ~ .wdt-snap-scroll-pagination { display: none; }
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination { text-align: center; margin-top: 20px; }
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button{
+  border-width: 0;
+  font-size: 0;
+  width: 56px;
+  height: 56px;
+  transition: var(--wdtBaseTransition);
+  border-radius: var(--wdtRadius_Full);
+  padding: 0;
+  margin: 5px;
+}
+
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button:hover{background: var(--wdtSecondaryColor);}
+
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button.wdt-pagination-prev:after, 
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button.wdt-pagination-next:after{
+  transform: none;
+  -webkit-transform: none;
+}
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button.wdt-pagination-prev:before, 
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button.wdt-pagination-next:before{
+  content: "";
+  position: relative;
+  background: var(--wdtAccentTxtColor);
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 99.9 73.8' style='enable-background:new 0 0 99.9 73.8;' xml:space='preserve'%3E%3Cpath d='M15,28.1c-3.9,2.5-7.7,4.1-10.5,5.1c-1.4,0.5-2.6,0.8-3.3,1c-0.4,0.1-0.7,0.2-0.9,0.2c0,0,0,0-0.1,0l-0.2,0l0,0l0,0 c0,0,0,0,0,0.2l0.1,7l0.6,0c0.2,0,0.4,0.1,0.7,0.1c0.8,0.1,2,0.4,3.4,0.8c2.9,0.8,6.8,2.1,10.8,4.4c8,4.5,16.6,12.4,19.2,26.9 l7.1-1.3c-3-16.2-12.3-25.6-21.3-31l79.2-0.7l-0.1-7.2l-81.1,0.7c0.1,0,0.1-0.1,0.2-0.1c9-5.9,18.6-16.1,20.6-33.4L32.3,0 C30.6,14.6,22.6,23.1,15,28.1z'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 99.9 73.8' style='enable-background:new 0 0 99.9 73.8;' xml:space='preserve'%3E%3Cpath d='M15,28.1c-3.9,2.5-7.7,4.1-10.5,5.1c-1.4,0.5-2.6,0.8-3.3,1c-0.4,0.1-0.7,0.2-0.9,0.2c0,0,0,0-0.1,0l-0.2,0l0,0l0,0 c0,0,0,0,0,0.2l0.1,7l0.6,0c0.2,0,0.4,0.1,0.7,0.1c0.8,0.1,2,0.4,3.4,0.8c2.9,0.8,6.8,2.1,10.8,4.4c8,4.5,16.6,12.4,19.2,26.9 l7.1-1.3c-3-16.2-12.3-25.6-21.3-31l79.2-0.7l-0.1-7.2l-81.1,0.7c0.1,0,0.1-0.1,0.2-0.1c9-5.9,18.6-16.1,20.6-33.4L32.3,0 C30.6,14.6,22.6,23.1,15,28.1z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+.wdt-column-wrapper.wdt-snap-scroll-enabled ~ .wdt-snap-scroll-pagination > button.wdt-pagination-next:before{transform: scale(-1);}
+
+/* ===== Scroll Snap - Scrollbar CSS ===== */
+
+  /* Firefox */
+  .wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll { scrollbar-width: none; scrollbar-color: var(--wdtPrimaryColor) transparent; }
+  /* Chrome, Edge, and Safari */
+  .wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll::-webkit-scrollbar { width: 0px; display: none; }
+  .wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll::-webkit-scrollbar-track { background: transparent; }
+  .wdt-column-wrapper.wdt-snap-scroll-enabled.wdt-snap-scroll::-webkit-scrollbar-thumb { background-color: var(--wdtPrimaryColor); border-radius: 0px; }
+
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+
+    .wdt-column-holder .wdt-column-wrapper { width: auto !important; }
+
+}

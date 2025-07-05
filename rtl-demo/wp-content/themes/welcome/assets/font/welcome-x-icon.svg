@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2024 by original authors @ fontello.com</metadata>
+<defs>
+<font id="welcome-x-icon" horiz-adv-x="1000" >
+<font-face font-family="welcome-x-icon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="twitter-x" unicode="&#xe800;" d="M759 757h138l-302-345 355-469h-278l-217 285-249-285h-138l322 369-340 445h285l197-260 227 260z m-49-731h76l-493 653h-82l499-653z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

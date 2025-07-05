@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+    Loader
+--------------------------------------------------------------*/
+
+    .pre-loader {
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999991;
+        background-color: #fff;
+    }
+
+    .loader-inner {
+        padding: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .loader-text {
+        display: inline-block;
+        font-family: var(--wdtFontTypo_Alt);
+        font-size: 3.75rem;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+        line-height: normal;
+        text-transform: uppercase;
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        -webkit-animation: textclip 1.5s linear infinite;
+        animation: textclip 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+    .pre-loader { background-color: var(--wdtBodyBGColor); }
+    .loader-text { background-image: linear-gradient(to right, var(--wdtPrimaryColor) 10%, var(--wdtHeadAltColor) 50%, var(--wdtPrimaryColor) 60%); }
+
+
+/*--------------------------------------------------------------
+    Responsive
+--------------------------------------------------------------*/
+
+    /*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    }
+
+
+    /* Common Styles for the devices below 479px width */
+
+    @media only screen and (max-width: 479px) {
+
+    }
+
+
+    .loader-square {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .loader-square>span{
+        width: 100px;
+        height: 100px;
+        background: var(--wdtPrimaryColor);
+        mask:
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) left  4px top 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) right 4px top 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) right 4px bottom 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) left  4px bottom 4px,
+        linear-gradient(var(--wdtPrimaryColor) 0 0);
+        -webkit-mask-composite:xor;
+        mask-composite:exclude;
+        animation: loder-animation 2s infinite;
+        display: inline-block;
+        -webkit-mask:
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) left  4px top 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) right 4px top 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) right 4px bottom 4px,
+        no-repeat linear-gradient(var(--wdtPrimaryColor) 0 0) left  4px bottom 4px,
+        linear-gradient(var(--wdtPrimaryColor) 0 0);
+        -webkit-mask-composite:xor;
+        mask-composite:exclude;
+        animation: loder-animation 2s infinite;
+        display: inline-block;
+    }
+        
+        @keyframes loder-animation {
+            0%    {-webkit-mask-size:0 0,0 0,0 0,0 0,auto}
+            12.5% {-webkit-mask-size:42px 42px,0 0,0 0,0 0,auto}
+            25%   {-webkit-mask-size:42px 42px,42px 42px,0 0,0 0,auto}
+            37.5% {-webkit-mask-size:42px 42px,42px 42px,42px 42px,0 0,auto}
+            50%   {-webkit-mask-size:42px 42px,42px 42px,42px 42px,42px 42px,auto}
+            62.5% {-webkit-mask-size:0 0,42px 42px,42px 42px,42px 42px,auto}
+            75%   {-webkit-mask-size:0 0,0 0,42px 42px,42px 42px,auto}
+            87.5% {-webkit-mask-size:0 0,0 0,0 0,42px 42px,auto}
+            100%  {-webkit-mask-size:0 0,0 0,0 0,0 0,auto}
+        }
